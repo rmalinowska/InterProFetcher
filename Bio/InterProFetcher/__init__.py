@@ -22,17 +22,6 @@ from urllib.parse import urlencode
 from urllib import request
 
 
-email = None
-max_tries = 3
-sleep_between_tries = 15
-tool = "biopython"
-api_key = None
-
-
-def eprint(**keywds):
-    print("It works, hello.")
-    return "returned value"
-
 def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = True):
     """
     Browse proteins from different databases and organisms.
@@ -80,9 +69,6 @@ def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = Tr
                 else:
                     sys.stderr.write("LAST URL: " + next)
                     raise e
-        except TimeoutError as e:
-            sys.stderr.write("LAST URL: " + next)
-            raise e
         except Exception as e:
             sys.stderr.write("LAST URL: " + next)
             raise e
@@ -99,45 +85,3 @@ def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = Tr
     else:
         return result_ids
     
-
-    # context = ssl._create_unverified_context()
-
-    # next = BASE_URL
-    # last_page = False
-
-    
-    # attempts = 0
-    # while next:
-    #     try:
-    #         req = request.Request(next, headers={"Accept": "application/json"})
-    #         res = request.urlopen(req, context=context)
-    #         # If the API times out due a long running query
-    #         if res.status == 408:
-    #             # wait just over a minute
-    #             sleep(61)
-    #             # then continue this loop with the same URL
-    #             continue
-    #         elif res.status == 204:
-    #             #no data so leave loop
-    #             break
-    #         payload = json.loads(res.read().decode())
-    #         next = payload["next"]
-    #         attempts = 0
-    #         if not next:
-    #             last_page = True
-    #     except HTTPError as e:
-    #         if e.code == 408:
-    #             sleep(61)
-    #             continue
-    #         else:
-    #             # If there is a different HTTP error, it wil re-try 3 times before failing
-    #             if attempts < 3:
-    #                 attempts += 1
-    #                 sleep(61)
-    #                 continue
-    #             else:
-    #                 sys.stderr.write("LAST URL: " + next)
-    #                 raise e
-
-    #     for i, item in enumerate(payload["results"]):
-    #         sys.stdout.write(item["metadata"]["accession"]+"\n")
