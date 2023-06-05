@@ -12,6 +12,7 @@
 from time import sleep
 import io
 import json
+import re
 import ssl
 import sys
 import warnings
@@ -32,16 +33,28 @@ def eprint(**keywds):
     print("It works, hello.")
     return "returned value"
 
-def browse_proteins(database):
-    BASE_URL = f"https://www.ebi.ac.uk:443/interpro/api/protein/UniProt/entry/{database}/?page_size=200"
+def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = True):
+    """
+    Browse proteins from different databases and organisms.
+
+    Argument database is a name of the database, organism (optional argument) is a species name.
+
+    Returns list of protein accession numbers that are matching the request.
+    """
+    if organism != "":
+        organism_string = "%20".join(re.split("\s+", organism.lower().strip()))
+        print(organism_string)
+        BASE_URL = f"https://www.ebi.ac.uk:443/interpro/api/protein/UniProt/entry/{database}/?search={organism_string}&page_size=200"
+    
+    else:
+        BASE_URL = f"https://www.ebi.ac.uk:443/interpro/api/protein/UniProt/entry/{database}/?page_size=200"
+
     context = ssl._create_unverified_context()
 
     next = BASE_URL
-    last_page = False
-    attempts = 0
-    print("Dzien dobry")
+    last_page = False #
+    result_ids = []
     while next:
-      
         try:
             req = request.Request(next)
             res = request.urlopen(req, context = context)
@@ -52,10 +65,9 @@ def browse_proteins(database):
                break
             payload = json.loads(res.read().decode())
             next = payload["next"]
-            print("Payload next", next)
-            attempts = 0 #?
-            if not next:
-               last_page = True
+            attempts = 0
+            if not next: #
+                last_page = True #
         except HTTPError as e:
             if e.code == 400:
                 sleep(61)
@@ -68,9 +80,64 @@ def browse_proteins(database):
                 else:
                     sys.stderr.write("LAST URL: " + next)
                     raise e
+        except TimeoutError as e:
+            sys.stderr.write("LAST URL: " + next)
+            raise e
+        except Exception as e:
+            sys.stderr.write("LAST URL: " + next)
+            raise e
         for i, item in enumerate(payload["results"]):
-            print(item["metadata"]["accession"])
+            result_ids.append(item["metadata"]["accession"])
+            sys.stdout.write(item["metadata"]["accession"] + "\n")
         
         if next:
             sleep(1)
-           
+    
+    if result_ids == []:
+        print("There is no data associated with this request.")
+        sys.exit()
+    else:
+        return result_ids
+    
+
+    # context = ssl._create_unverified_context()
+
+    # next = BASE_URL
+    # last_page = False
+
+    
+    # attempts = 0
+    # while next:
+    #     try:
+    #         req = request.Request(next, headers={"Accept": "application/json"})
+    #         res = request.urlopen(req, context=context)
+    #         # If the API times out due a long running query
+    #         if res.status == 408:
+    #             # wait just over a minute
+    #             sleep(61)
+    #             # then continue this loop with the same URL
+    #             continue
+    #         elif res.status == 204:
+    #             #no data so leave loop
+    #             break
+    #         payload = json.loads(res.read().decode())
+    #         next = payload["next"]
+    #         attempts = 0
+    #         if not next:
+    #             last_page = True
+    #     except HTTPError as e:
+    #         if e.code == 408:
+    #             sleep(61)
+    #             continue
+    #         else:
+    #             # If there is a different HTTP error, it wil re-try 3 times before failing
+    #             if attempts < 3:
+    #                 attempts += 1
+    #                 sleep(61)
+    #                 continue
+    #             else:
+    #                 sys.stderr.write("LAST URL: " + next)
+    #                 raise e
+
+    #     for i, item in enumerate(payload["results"]):
+    #         sys.stdout.write(item["metadata"]["accession"]+"\n")

@@ -4,4 +4,4 @@ import Bio
 from Bio import InterProFetcher
 
 
-InterProFetcher.browse_proteins("pfam")
+print(InterProFetcher.browse_proteins("pfam", "homo sapiens"))
