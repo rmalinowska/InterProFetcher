@@ -22,7 +22,7 @@ from urllib.parse import urlencode
 from urllib import request
 
 
-def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = True):
+def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = True, save_to_file: bool = False):
     """
     Browse proteins from different databases and organisms.
 
@@ -32,7 +32,6 @@ def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = Tr
     """
     if organism != "":
         organism_string = "%20".join(re.split("\s+", organism.lower().strip()))
-        print(organism_string)
         BASE_URL = f"https://www.ebi.ac.uk:443/interpro/api/protein/UniProt/entry/{database}/?search={organism_string}&page_size=200"
     
     else:
@@ -73,8 +72,12 @@ def browse_proteins(database: str, organism: str = "", write_on_sdout: bool = Tr
             sys.stderr.write("LAST URL: " + next)
             raise e
         for i, item in enumerate(payload["results"]):
-            result_ids.append(item["metadata"]["accession"])
-            sys.stdout.write(item["metadata"]["accession"] + "\n")
+            accesion = item["metadata"]["accession"]
+            result_ids.append(accesion)
+            sys.stdout.write(accesion + "\n")
+            if save_to_file:
+                with open("protein_accessions_" + database + "_" + "_".join(re.split("\s+", organism)) + ".csv", "a+") as f:
+                    f.write(accesion + "\n")
         
         if next:
             sleep(1)
