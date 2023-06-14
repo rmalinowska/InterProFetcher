@@ -4,11 +4,9 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to InterProFetcher’s documentation! &mdash; InterProFetcher Documentation 1.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>InterProFetcher package &mdash; InterProFetcher Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -20,6 +18,7 @@
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,15 +29,20 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             InterProFetcher Documentation
           </a>
-
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to InterProFetcher’s documentation!</a></li>
-<li><a class="reference internal" href="#interprofetcher-package">InterProFetcher package</a><ul>
+<li><a class="reference internal" href="#">InterProFetcher package</a><ul>
 <li><a class="reference internal" href="#module-InterProFetcher">Module contents</a><ul>
 <li><a class="reference internal" href="#InterProFetcher.browse_by_database"><code class="docutils literal notranslate"><span class="pre">browse_by_database()</span></code></a></li>
 <li><a class="reference internal" href="#InterProFetcher.browse_by_type"><code class="docutils literal notranslate"><span class="pre">browse_by_type()</span></code></a></li>
@@ -61,17 +65,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">InterProFetcher Documentation</a>
+          <a href="index.html">InterProFetcher Documentation</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to InterProFetcher’s documentation!</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">InterProFetcher package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/InterProFetcher.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,10 +83,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="welcome-to-interprofetcher-s-documentation">
-<h1>Welcome to InterProFetcher’s documentation!<a class="headerlink" href="#welcome-to-interprofetcher-s-documentation" title="Permalink to this heading"></a></h1>
-</section>
-<section id="interprofetcher-package">
+  <section id="interprofetcher-package">
 <h1>InterProFetcher package<a class="headerlink" href="#interprofetcher-package" title="Permalink to this heading"></a></h1>
 <section id="module-InterProFetcher">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-InterProFetcher" title="Permalink to this heading"></a></h2>
@@ -109,22 +110,6 @@
 </dl>
 </dd></dl>
 
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    pfam_transmembrane_domains = InterProFetcher.browse_by_database(database = 'pfam',
-                                                                    type = 'domain',
-                                                                    keyword = 'transmembrane',
-                                                                    write_on_sdout = True,
-                                                                    save_to_file = False)
-
-    ncbifam_repeats = InterProFetcher.browse_by_database(database = 'ncbifam',
-                                                        type = 'repeat',
-                                                        write_on_sdout = False,
-                                                        save_to_file = True)
-  </pre>
-</div>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.browse_by_type">
 <span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_by_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_by_type" title="Permalink to this definition"></a></dt>
@@ -146,16 +131,6 @@
 </dd>
 </dl>
 </dd></dl>
-
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    cystatin_families = InterProFetcher.browse_by_type(type = 'family',
-                                                       keyword = 'cystatin',
-                                                       write_on_sdout = True,
-                                                       save_to_file = False)
-  </pre>
-</div>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.browse_proteins">
@@ -180,17 +155,6 @@
 </dl>
 </dd></dl>
 
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    danio_rerio_proteins = InterProFetcher.browse_proteins(database = "ncbifam",
-                                                           organism = "danio rerio",
-                                                           reviewed = True,
-                                                           save_to_file = False)
-  </pre>
-</div>
-
-
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.browse_proteomes">
 <span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_proteomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organism</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_proteomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_proteomes" title="Permalink to this definition"></a></dt>
@@ -203,25 +167,10 @@
 <li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csv file. Defaults to False.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>proteome accession numbers</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list</p>
-</dd>
 </dl>
+<p>Argument organism is a name of the organism to browse with.</p>
+<p>Returns list of proteome accession numbers that are matching the request.</p>
 </dd></dl>
-
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    s_cerevisiae_proteomes = InterProFetcher.browse_proteomes(organism = 'saccharomyces cerevisiae',
-                                                             write_on_sdout = True,
-                                                             save_to_file = True)
-  </pre>
-</div>
-
-
 
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.browse_structures">
@@ -246,16 +195,6 @@
 </dl>
 </dd></dl>
 
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    myoglobin = InterProFetcher.browse_structures(database = "InterPro",
-                                                  resolution = "0-2",
-                                                  keyword = "myoglobin",
-                                                  save_to_file = False)
-  </pre>
-</div>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.download_pdb_structures">
 <span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">download_pdb_structures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PDB_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#download_pdb_structures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.download_pdb_structures" title="Permalink to this definition"></a></dt>
@@ -269,15 +208,6 @@
 </dd>
 </dl>
 </dd></dl>
-
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    InterProFetcher.download_pdb_structures(PDB_ids = ['11as', '1a3z', '4jkj'],
-                                            output_path = "InterProFetcherTesting")
-  </pre>
-</div>
-
 
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.fetch_entries">
@@ -295,23 +225,6 @@ If an accession number is not found, a warning message is displayed.</p>
 </dl>
 </dd></dl>
 
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    InterProFetcher.fetch_entries(database = 'InterPro',
-                                  accession_number = 'IPR000006',
-                                  output_directory = "InterProFetcherTesting")
-
-    InterProFetcher.fetch_entries(database = 'pfam',
-                                  accession_number = 'PF00003',
-                                  output_directory = "InterProFetcherTesting")
-
-    InterProFetcher.fetch_entries(database = 'ncbifam',
-                                  accession_number = 'NF000535',
-                                  output_directory = "InterProFetcherTesting")
-  </pre>
-</div>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.fetch_protein_sequences">
 <span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">fetch_protein_sequences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accession_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#fetch_protein_sequences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.fetch_protein_sequences" title="Permalink to this definition"></a></dt>
@@ -326,14 +239,6 @@ If there is no sequence found for a given accession number, a warning message is
 </dd>
 </dl>
 </dd></dl>
-
-<div class="highlight">
-  <pre>
-    from Bio import InterProFetcher
-    InterProFetcher.fetch_protein_sequences(['A0A067XG51', 'A0A006', 'A0A009F5T3'],
-                                             output_path = "InterProFetcherTesting/proteins.fasta")
-  </pre>
-</div>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="InterProFetcher.fetch_proteomes">
@@ -350,15 +255,6 @@ If a proteome is not found for a given ID, a warning message is displayed.</p>
 </dl>
 </dd></dl>
 
-<div class="highlight">
-  <pre>
-    InterProFetcher.fetch_proteomes(proteome_ids = ['UP000000216', 'UP000000227'],
-                                    output_directory = "InterProFetcherTesting")
-  </pre>
-</div>
-
-<div class="toctree-wrapper compound">
-</div>
 </section>
 </section>
 
