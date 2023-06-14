@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to InterProFetcher’s documentation! &mdash; InterProFetcher Documentation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            InterProFetcher Documentation
+          </a>
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to InterProFetcher’s documentation!</a></li>
+<li><a class="reference internal" href="#interprofetcher-package">InterProFetcher package</a><ul>
+<li><a class="reference internal" href="#module-InterProFetcher">Module contents</a><ul>
+<li><a class="reference internal" href="#InterProFetcher.browse_by_database"><code class="docutils literal notranslate"><span class="pre">browse_by_database()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.browse_by_type"><code class="docutils literal notranslate"><span class="pre">browse_by_type()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.browse_proteins"><code class="docutils literal notranslate"><span class="pre">browse_proteins()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.browse_proteomes"><code class="docutils literal notranslate"><span class="pre">browse_proteomes()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.browse_structures"><code class="docutils literal notranslate"><span class="pre">browse_structures()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.download_pdb_structures"><code class="docutils literal notranslate"><span class="pre">download_pdb_structures()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.fetch_entries"><code class="docutils literal notranslate"><span class="pre">fetch_entries()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.fetch_protein_sequences"><code class="docutils literal notranslate"><span class="pre">fetch_protein_sequences()</span></code></a></li>
+<li><a class="reference internal" href="#InterProFetcher.fetch_proteomes"><code class="docutils literal notranslate"><span class="pre">fetch_proteomes()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">InterProFetcher Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to InterProFetcher’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-interprofetcher-s-documentation">
+<h1>Welcome to InterProFetcher’s documentation!<a class="headerlink" href="#welcome-to-interprofetcher-s-documentation" title="Permalink to this heading"></a></h1>
+</section>
+<section id="interprofetcher-package">
+<h1>InterProFetcher package<a class="headerlink" href="#interprofetcher-package" title="Permalink to this heading"></a></h1>
+<section id="module-InterProFetcher">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-InterProFetcher" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.browse_by_database">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_by_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_by_database"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_by_database" title="Permalink to this definition"></a></dt>
+<dd><p>Browse entries from selected database based on a specific type and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> (<em>str</em>) – name of the database (cathgene3d, cdd, hamap, ncbifam, panther, pfam, pirsf, prints, profile, prosite, sfld, smart, ssf).</p></li>
+<li><p><strong>type</strong> (<em>str</em><em>, </em><em>optional</em>) – type of entry to browse (family, domain, repeat, conserved_site, unknown).</p></li>
+<li><p><strong>keyword</strong> (<em>str</em><em>, </em><em>optional</em>) – keyword used to filter the entries. Defaults to “”.</p></li>
+<li><p><strong>write_on_sdout</strong> (<em>bool</em><em>, </em><em>optional</em>) – write results on stdout. Defaults to True.</p></li>
+<li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csv file. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>accession numbers that are matching the request.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    pfam_transmembrane_domains = InterProFetcher.browse_by_database(database = 'pfam',
+                                                                    type = 'domain',
+                                                                    keyword = 'transmembrane',
+                                                                    write_on_sdout = True,
+                                                                    save_to_file = False)
+
+    ncbifam_repeats = InterProFetcher.browse_by_database(database = 'ncbifam',
+                                                        type = 'repeat',
+                                                        write_on_sdout = False,
+                                                        save_to_file = True)
+  </pre>
+</div>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.browse_by_type">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_by_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Browse entries from the InterPro database based on a specific type and keyword.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> (<em>str</em>) – type of entry to browse (family, domain, homologous_superfamily, repeat, conserved_site, active_site, binding_site, ptm).</p></li>
+<li><p><strong>keyword</strong> (<em>str</em><em>, </em><em>optional</em>) – keyword used to filter the entries. Defaults to “”.</p></li>
+<li><p><strong>write_on_sdout</strong> (<em>bool</em><em>, </em><em>optional</em>) – write results on stdout. Defaults to True.</p></li>
+<li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csv file. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>accession numbers of selected type that are matching the request.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    cystatin_families = InterProFetcher.browse_by_type(type = 'family',
+                                                       keyword = 'cystatin',
+                                                       write_on_sdout = True,
+                                                       save_to_file = False)
+  </pre>
+</div>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.browse_proteins">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_proteins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">organism</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reviewed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_proteins"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_proteins" title="Permalink to this definition"></a></dt>
+<dd><p>Browse proteins from different databases and organisms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> (<em>str</em>) – name of the database (InterPro, cathgene3d, cdd, hamap, ncbifam, panther, pfam, pirsf, prints, profile, prosite, sfld, smart, ssf).</p></li>
+<li><p><strong>organism</strong> (<em>str</em><em>, </em><em>optional</em>) – species name.</p></li>
+<li><p><strong>reviewed</strong> (<em>bool</em><em>, </em><em>optional</em>) – only reviewed proteins. Defaults to False.</p></li>
+<li><p><strong>write_on_sdout</strong> (<em>bool</em><em>, </em><em>optional</em>) – write results on stdout. Defaults to True.</p></li>
+<li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csvfile. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>protein accession numbers</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    danio_rerio_proteins = InterProFetcher.browse_proteins(database = "ncbifam",
+                                                           organism = "danio rerio",
+                                                           reviewed = True,
+                                                           save_to_file = False)
+  </pre>
+</div>
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.browse_proteomes">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_proteomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">organism</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_sdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_proteomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_proteomes" title="Permalink to this definition"></a></dt>
+<dd><p>Browse proteomes from the InterPro database for a specific organism.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>organism</strong> (<em>str</em>) – name of the organism to browse with.</p></li>
+<li><p><strong>write_on_sdout</strong> (<em>bool</em><em>, </em><em>optional</em>) – write results on stdout. Defaults to True.</p></li>
+<li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csv file. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>proteome accession numbers</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    s_cerevisiae_proteomes = InterProFetcher.browse_proteomes(organism = 'saccharomyces cerevisiae',
+                                                             write_on_sdout = True,
+                                                             save_to_file = True)
+  </pre>
+</div>
+
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.browse_structures">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">browse_structures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">write_on_stdout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#browse_structures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.browse_structures" title="Permalink to this definition"></a></dt>
+<dd><p>Browse PDB structures from different databases based on a specific keyword and resolution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>database</strong> (<em>str</em>) – name of the database (InterPro, cathgene3d, cdd, hamap, ncbifam, panther, pfam, pirsf, prints, profile, prosite, sfld, smart, ssf).</p></li>
+<li><p><strong>keyword</strong> (<em>str</em>) – keyword used to filter the entries.</p></li>
+<li><p><strong>resolution</strong> (<em>str</em><em>, </em><em>optional</em>) – resolution of the structure. Defaults to “”. Available resolutions: ‘0-2’, ‘2-4’, ‘4-100’.</p></li>
+<li><p><strong>write_on_stdout</strong> (<em>bool</em><em>, </em><em>optional</em>) – write results on stdout. Defaults to True.</p></li>
+<li><p><strong>save_to_file</strong> (<em>bool</em><em>, </em><em>optional</em>) – save results to a csv file. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>PDB accession numbers</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    myoglobin = InterProFetcher.browse_structures(database = "InterPro",
+                                                  resolution = "0-2",
+                                                  keyword = "myoglobin",
+                                                  save_to_file = False)
+  </pre>
+</div>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.download_pdb_structures">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">download_pdb_structures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PDB_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#download_pdb_structures"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.download_pdb_structures" title="Permalink to this definition"></a></dt>
+<dd><p>Download PDB files from the list of PDB ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>PDB_ids</strong> (<em>list</em>) – list of PDB ids.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – path to the output directory.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    InterProFetcher.download_pdb_structures(PDB_ids = ['11as', '1a3z', '4jkj'],
+                                            output_path = "InterProFetcherTesting")
+  </pre>
+</div>
+
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.fetch_entries">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">fetch_entries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accession_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#fetch_entries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.fetch_entries" title="Permalink to this definition"></a></dt>
+<dd><p>Fetch sequences based on the given a databse and accession number and save them to FASTA file.
+Accession numbers might be from different databases and different types (families, domains, etc).
+If an accession number is not found, a warning message is displayed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>accession_numbers</strong> (<em>list</em>) – list of accession numbers to fetch.</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – directory to save the sequences.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    InterProFetcher.fetch_entries(database = 'InterPro',
+                                  accession_number = 'IPR000006',
+                                  output_directory = "InterProFetcherTesting")
+
+    InterProFetcher.fetch_entries(database = 'pfam',
+                                  accession_number = 'PF00003',
+                                  output_directory = "InterProFetcherTesting")
+
+    InterProFetcher.fetch_entries(database = 'ncbifam',
+                                  accession_number = 'NF000535',
+                                  output_directory = "InterProFetcherTesting")
+  </pre>
+</div>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.fetch_protein_sequences">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">fetch_protein_sequences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">accession_numbers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#fetch_protein_sequences"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.fetch_protein_sequences" title="Permalink to this definition"></a></dt>
+<dd><p>Fetch protein sequences based on the given accession numbers and save them to a file.
+If there is no sequence found for a given accession number, a warning message is displayed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>accession_numbers</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – list of protein accession numbers to browse.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – name of the file to save the sequences.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    from Bio import InterProFetcher
+    InterProFetcher.fetch_protein_sequences(['A0A067XG51', 'A0A006', 'A0A009F5T3'],
+                                             output_path = "InterProFetcherTesting/proteins.fasta")
+  </pre>
+</div>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="InterProFetcher.fetch_proteomes">
+<span class="sig-prename descclassname"><span class="pre">InterProFetcher.</span></span><span class="sig-name descname"><span class="pre">fetch_proteomes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proteome_ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/InterProFetcher.html#fetch_proteomes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#InterProFetcher.fetch_proteomes" title="Permalink to this definition"></a></dt>
+<dd><p>Fetch proteomes based on the given InterPro proteome IDs and save them to individual FASTA files.
+If a proteome is not found for a given ID, a warning message is displayed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>proteome_ids</strong> (<em>list</em>) – list of proteome IDs to fetch.</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – directory to save the proteome files.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="highlight">
+  <pre>
+    InterProFetcher.fetch_proteomes(proteome_ids = ['UP000000216', 'UP000000227'],
+                                    output_directory = "InterProFetcherTesting")
+  </pre>
+</div>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Izabela Fedorczyk, Roksana Malinowska and Weronika Trawińska.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
